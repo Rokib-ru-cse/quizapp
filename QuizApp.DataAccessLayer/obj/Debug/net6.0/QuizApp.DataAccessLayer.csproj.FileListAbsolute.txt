@@ -1,0 +1,17 @@
+G:\project\QuizApp\QuizApp.DataAccessLayer\bin\Debug\net6.0\QuizApp.DataAccessLayer.deps.json
+G:\project\QuizApp\QuizApp.DataAccessLayer\bin\Debug\net6.0\QuizApp.DataAccessLayer.dll
+G:\project\QuizApp\QuizApp.DataAccessLayer\bin\Debug\net6.0\QuizApp.DataAccessLayer.pdb
+G:\project\QuizApp\QuizApp.DataAccessLayer\bin\Debug\net6.0\QuizApp.Models.dll
+G:\project\QuizApp\QuizApp.DataAccessLayer\bin\Debug\net6.0\QuizApp.Models.pdb
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\QuizApp.DataAccessLayer.csproj.AssemblyReference.cache
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\QuizApp.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\QuizApp.DataAccessLayer.AssemblyInfoInputs.cache
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\QuizApp.DataAccessLayer.AssemblyInfo.cs
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\QuizApp.DataAccessLayer.csproj.CoreCompileInputs.cache
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\QuizApp.DataAccessLayer.csproj.CopyComplete
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\QuizApp.DataAccessLayer.dll
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\refint\QuizApp.DataAccessLayer.dll
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\QuizApp.DataAccessLayer.pdb
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\ref\QuizApp.DataAccessLayer.dll
+G:\project\QuizApp\QuizApp.DataAccessLayer\bin\Debug\net6.0\QuizApp.DataAccessLayer.runtimeconfig.json
+G:\project\QuizApp\QuizApp.DataAccessLayer\obj\Debug\net6.0\QuizApp.DataAccessLayer.genruntimeconfig.cache

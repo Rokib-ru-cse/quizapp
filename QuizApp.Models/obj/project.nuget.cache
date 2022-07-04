@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "otPKs/DI8o8f3SKIWy03BvcHuGflTG70ha31R2D10g3m8Kj+XA0YkQ4jRZ67Js5f50fOIsBuIs6+yNeclvKqWQ==",
+  "success": true,
+  "projectFilePath": "G:\\project\\QuizApp\\QuizApp.Models\\QuizApp.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.6\\microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}
