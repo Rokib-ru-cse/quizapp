@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using QuizApp.DataAccessLayer.Infrastructure.IRepository;
-using QuizApp.Models;
 
 namespace QuizApp.Areas.Users.Controllers
 {
@@ -9,73 +7,73 @@ namespace QuizApp.Areas.Users.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
-        public UserController(IUnitOfWork unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-        }
+        //private readonly IUnitOfWork _unitOfWork;
+        //public UserController(IUnitOfWork unitOfWork)
+        //{
+        //    _unitOfWork = unitOfWork;
+        //}
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok(_unitOfWork.User.GetAll());
-        }
+        //[HttpGet]
+        //public IActionResult Get()
+        //{
+        //    return Ok(_unitOfWork.User.GetAll());
+        //}
 
-        [HttpPost]
-        public IActionResult Add(User user)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest("Values are not correct");
-            }
-            _unitOfWork.User.Add(user);
-            _unitOfWork.Save();
-            return Ok("User created successfully");
-        }
+        //[HttpPost]
+        //public IActionResult Add(User user)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest("Values are not correct");
+        //    }
+        //    _unitOfWork.User.Add(user);
+        //    _unitOfWork.Save();
+        //    return Ok("User created successfully");
+        //}
 
-        [HttpPut]
-        public IActionResult Update(User user)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest("Values are not correct");
-            }
-            _unitOfWork.User.Update(user);
-            _unitOfWork.Save();
-            return Ok("User updated successfully");
-        }
+        //[HttpPut]
+        //public IActionResult Update(User user)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest("Values are not correct");
+        //    }
+        //    _unitOfWork.User.Update(user);
+        //    _unitOfWork.Save();
+        //    return Ok("User updated successfully");
+        //}
 
 
-        [HttpGet("{id}")]
-        public IActionResult Get(long id = 0)
-        {
-            if (id == 0)
-            {
-                return NotFound();
-            }
-            var user = _unitOfWork.User.GetT(x => x.Id == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            return Ok(user);
-        }
+        //[HttpGet("{id}")]
+        //public IActionResult Get(long id = 0)
+        //{
+        //    if (id == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var user = _unitOfWork.User.GetT(x => x.Id == id);
+        //    if (user == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(user);
+        //}
 
-        [HttpDelete("{id}")]
-        public IActionResult DeleteUser(long id = 0)
-        {
-            if (id == 0)
-            {
-                return NotFound();
-            }
-            var user = _unitOfWork.User.GetT(x => x.Id == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            _unitOfWork.User.Delete(user);
-            _unitOfWork.Save();
-            return Ok(user);
-        }
+        //[HttpDelete("{id}")]
+        //public IActionResult DeleteUser(long id = 0)
+        //{
+        //    if (id == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var user = _unitOfWork.User.GetT(x => x.Id == id);
+        //    if (user == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    _unitOfWork.User.Delete(user);
+        //    _unitOfWork.Save();
+        //    return Ok(user);
+        //}
     }
 }

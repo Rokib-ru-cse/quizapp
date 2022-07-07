@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizApp", "QuizApp\QuizApp.csproj", "{6022AB20-8A47-4421-9611-F81B66E50B82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizApp", "QuizApp\QuizApp.csproj", "{26C54C98-F7EC-446C-ACE5-8917F24136BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizApp.Models", "QuizApp.Models\QuizApp.Models.csproj", "{E0136D7B-2E9B-4A75-B9D6-CA2815322540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizApp.DataAccessLayer", "QuizApp.DataAccessLayer\QuizApp.DataAccessLayer.csproj", "{A22F7D16-4EBA-4C68-BCB1-8F269CF273EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizApp.DataAccessLayer", "QuizApp.DataAccessLayer\QuizApp.DataAccessLayer.csproj", "{6BBDDAC2-031A-4A1C-B552-65344CB01EC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizApp.Models", "QuizApp.Models\QuizApp.Models.csproj", "{6FFA1230-DD38-4FE0-BEE4-B316CE91272D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6022AB20-8A47-4421-9611-F81B66E50B82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6022AB20-8A47-4421-9611-F81B66E50B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6022AB20-8A47-4421-9611-F81B66E50B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6022AB20-8A47-4421-9611-F81B66E50B82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0136D7B-2E9B-4A75-B9D6-CA2815322540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0136D7B-2E9B-4A75-B9D6-CA2815322540}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0136D7B-2E9B-4A75-B9D6-CA2815322540}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0136D7B-2E9B-4A75-B9D6-CA2815322540}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BBDDAC2-031A-4A1C-B552-65344CB01EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BBDDAC2-031A-4A1C-B552-65344CB01EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BBDDAC2-031A-4A1C-B552-65344CB01EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BBDDAC2-031A-4A1C-B552-65344CB01EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C54C98-F7EC-446C-ACE5-8917F24136BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C54C98-F7EC-446C-ACE5-8917F24136BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C54C98-F7EC-446C-ACE5-8917F24136BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C54C98-F7EC-446C-ACE5-8917F24136BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A22F7D16-4EBA-4C68-BCB1-8F269CF273EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A22F7D16-4EBA-4C68-BCB1-8F269CF273EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A22F7D16-4EBA-4C68-BCB1-8F269CF273EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A22F7D16-4EBA-4C68-BCB1-8F269CF273EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFA1230-DD38-4FE0-BEE4-B316CE91272D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFA1230-DD38-4FE0-BEE4-B316CE91272D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFA1230-DD38-4FE0-BEE4-B316CE91272D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFA1230-DD38-4FE0-BEE4-B316CE91272D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

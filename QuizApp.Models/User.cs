@@ -1,11 +1,17 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
+
 namespace QuizApp.Models
 {
     public class User
     {
-        public long Id { get; set; }
-        public string Name { get; set; }
+
+        public string? Id { get; set; }
+        [Required, MinLength(2, ErrorMessage = "Minimum length 2")]
+        public string UserName { get; set; }
+        [Required, EmailAddress]
         public string Email { get; set; }
+        [DataType(DataType.Password), Required, MinLength(4, ErrorMessage = "Minlength is 4")]
         public string Password { get; set; }
         public string? Image { get; set; }
         public string? Phone { get; set; }

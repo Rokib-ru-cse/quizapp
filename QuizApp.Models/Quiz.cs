@@ -15,9 +15,9 @@ namespace QuizApp.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
         public virtual User CreatedBy { get; set; }
-        public long CreatedById { get; set; }
+        public string CreatedById { get; set; }
         public virtual User UpdatedBy { get; set; }
-        public long UpdatedById { get; set; }
+        public string UpdatedById { get; set; }
         public ICollection<Question> Questions { get; set; }
 
     }

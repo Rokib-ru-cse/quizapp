@@ -1,10 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "otPKs/DI8o8f3SKIWy03BvcHuGflTG70ha31R2D10g3m8Kj+XA0YkQ4jRZ67Js5f50fOIsBuIs6+yNeclvKqWQ==",
+  "dgSpecHash": "ZC1VxgCyXpxiWkf2c5iz4vr0OSk3mlibZOjjO/ibLtlxELCRzMhQURn/B43MR7RQCO01TeE8b5r+naJ5fe3e9A==",
   "success": true,
   "projectFilePath": "G:\\project\\QuizApp\\QuizApp.Models\\QuizApp.Models.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.6\\microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512"
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.6\\microsoft.aspnetcore.cryptography.internal.6.0.6.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.6\\microsoft.aspnetcore.cryptography.keyderivation.6.0.6.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.6\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.6.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.6\\microsoft.entityframeworkcore.6.0.6.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.6\\microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.6\\microsoft.entityframeworkcore.analyzers.6.0.6.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.6\\microsoft.entityframeworkcore.relational.6.0.6.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.6\\microsoft.extensions.identity.core.6.0.6.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.6\\microsoft.extensions.identity.stores.6.0.6.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\rokib.DESKTOP-SB2ILP7\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

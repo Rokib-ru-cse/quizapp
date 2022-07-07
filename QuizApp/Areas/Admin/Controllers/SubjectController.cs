@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QuizApp.DataAccessLayer.Infrastructure.IRepository;
 using QuizApp.Models;
+using QuizApp.Models.ViewModels;
 
 namespace QuizApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("api/[controller]")]
-    [ApiController]
-    public class SubjectController : ControllerBase
+    public class SubjectController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -17,63 +16,69 @@ namespace QuizApp.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Index()
         {
-            return Ok(_unitOfWork.Subject.GetAll());
+            return View(_unitOfWork.Subject.GetAll());
         }
 
+        [HttpGet]
+        public IActionResult Details(long id)
+        {
+            Subject subject = _unitOfWork.Subject.GetT(x => x.Id == id);
+            SubjectViewModel model = SubjectViewModelFactory.Details(subject);
+            return View("SubjectEditor", model);
+
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View("SubjectEditor", SubjectViewModelFactory.Create(new Subject()));
+        }
         [HttpPost]
-        public IActionResult Add(Subject subject)
+        public IActionResult Create(Subject subject)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return BadRequest("Values are not correct");
+                _unitOfWork.Subject.Add(subject);
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
             }
-            _unitOfWork.Subject.Add(subject);
-            _unitOfWork.Save();
-            return Ok("Subject Create Successfully");
+            return View(subject);
         }
-        [HttpPut]
-        public IActionResult Update(Subject subject)
+        [HttpGet]
+        public IActionResult Edit(long id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest("Values are not correct");
-            }
-            _unitOfWork.Subject.Update(subject);
-            _unitOfWork.Save();
-            return Ok("Subject updated successfully");
-        }
+            Subject subject = _unitOfWork.Subject.GetT(x => x.Id == id);
+            SubjectViewModel model = SubjectViewModelFactory.Edit(subject);
+            return View("SubjectEditor", model);
 
-        [HttpGet("{id}")]
-        public IActionResult Get(long id = 0)
-        {
-            if (id == 0)
-            {
-                return NotFound();
-            }
-            var subject = _unitOfWork.Subject.GetT(x => x.Id == id);
-            if (subject == null)
-            {
-                return NotFound();
-            }
-            return Ok(subject);
         }
-        [HttpDelete("{id}")]
-        public IActionResult DeleteSubject(long id = 0)
+        [HttpPost]
+        public IActionResult Edit([FromForm] Subject subject)
+        {
+            if (ModelState.IsValid)
+            {
+                _unitOfWork.Subject.Update(subject);
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
+            }
+            return View(subject);
+        }
+        public IActionResult Delete(long id = 0)
         {
             if (id == 0)
             {
-                return NotFound();
+                return RedirectToAction("Index");
             }
             var subject = _unitOfWork.Subject.GetT(x => x.Id == id);
             if (subject == null)
             {
-                return NotFound();
+                return RedirectToAction("Index");
             }
             _unitOfWork.Subject.Delete(subject);
             _unitOfWork.Save();
-            return Ok(subject);
+            return RedirectToAction("Index");
         }
 
     }

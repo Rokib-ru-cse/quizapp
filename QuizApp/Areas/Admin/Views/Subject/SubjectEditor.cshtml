@@ -1,0 +1,26 @@
+﻿@model SubjectViewModel
+
+@{
+    ViewBag.Titel = "Subject Editor";
+}
+
+<h1>Subject Editor</h1>
+<a class="btn btn-outline-primary my-2" asp-action="Index">Back to list</a>
+<h5 class="bg-@Model.Theme text-white text-center p-2">@Model.Action</h5>
+
+<form asp-action="@Model.Action" method="post">
+    <div class="text-danger" asp-validation-summary="All" ></div>
+    <div class="form-group">
+        <label>Id</label>
+        <input asp-for="Subject.Id" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Subject.Name" class="form-control" readonly="@Model.ReadOnly" />
+        <span class="text-danger" asp-validation-for="Subject.Name"></span>
+    </div>
+    @if (Model.ShowAction == true)
+    {
+        <button class="btn btn-outline-@Model.Theme mt-2">@Model.Action</button>
+    }
+</form>

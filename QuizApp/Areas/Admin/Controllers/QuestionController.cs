@@ -5,9 +5,7 @@ using QuizApp.Models;
 namespace QuizApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("api/[controller]")]
-    [ApiController]
-    public class QuestionController : ControllerBase
+    public class QuestionController : Controller
     {
         private IUnitOfWork _unitOfWork;
         public QuestionController(IUnitOfWork unitOfWork)
@@ -15,9 +13,9 @@ namespace QuizApp.Areas.Admin.Controllers
             _unitOfWork = unitOfWork;
         }
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Index()
         {
-            return Ok(_unitOfWork.Question.GetAll());
+            return View(_unitOfWork.Question.GetAll());
         }
 
         [HttpPost]
@@ -45,20 +43,20 @@ namespace QuizApp.Areas.Admin.Controllers
         }
 
 
-        [HttpGet("{id}")]
-        public IActionResult Get(long id = 0)
-        {
-            if (id == 0)
-            {
-                return NotFound();
-            }
-            var question = _unitOfWork.Question.GetT(x => x.Id == id);
-            if (question == null)
-            {
-                return NotFound();
-            }
-            return Ok(question);
-        }
+        //[HttpGet("{id}")]
+        //public IActionResult Get(long id = 0)
+        //{
+        //    if (id == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var question = _unitOfWork.Question.GetT(x => x.Id == id);
+        //    if (question == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(question);
+        //}
 
         [HttpDelete("{id}")]
         public IActionResult DeleteQuestion(long id = 0)

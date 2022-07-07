@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QuizApp.DataAccessLayer.Infrastructure.IRepository;
 using QuizApp.Models;
+using QuizApp.Models.ViewModels;
 
 namespace QuizApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("api/[controller]")]
-    [ApiController]
-    public class LevelController : ControllerBase
+    public class LevelController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
         public LevelController(IUnitOfWork unitOfWork)
@@ -16,62 +15,69 @@ namespace QuizApp.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Index()
         {
-            return Ok(_unitOfWork.Level.GetAll());
+            return View(_unitOfWork.Level.GetAll());
         }
 
+        [HttpGet]
+        public IActionResult Details(long id)
+        {
+            Level level = _unitOfWork.Level.GetT(x => x.Id == id);
+            LevelViewModel model = LevelViewModelFactory.Details(level);
+            return View("LevelEditor", model);
+
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View("LevelEditor", LevelViewModelFactory.Create(new Level()));
+        }
         [HttpPost]
-        public IActionResult Add(Level level)
+        public IActionResult Create(Level level)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return BadRequest("Values are not correct");
+                _unitOfWork.Level.Add(level);
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
             }
-            _unitOfWork.Level.Add(level);
-            _unitOfWork.Save();
-            return Ok("Level created successfully");
+            return View(level);
         }
-        [HttpPut]
-        public IActionResult Update(Level level)
+        [HttpGet]
+        public IActionResult Edit(long id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest("Values are not correct");
-            }
-            _unitOfWork.Level.Update(level);
-            _unitOfWork.Save();
-            return Ok("Level updated successfully");
+            Level level = _unitOfWork.Level.GetT(x => x.Id == id);
+            LevelViewModel model = LevelViewModelFactory.Edit(level);
+            return View("LevelEditor", model);
+
         }
-        [HttpGet("{id}")]
-        public IActionResult Get(long id = 0)
+        [HttpPost]
+        public IActionResult Edit([FromForm] Level level)
+        {
+            if (ModelState.IsValid)
+            {
+                _unitOfWork.Level.Update(level);
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
+            }
+            return View(level);
+        }
+        public IActionResult Delete(long id = 0)
         {
             if (id == 0)
             {
-                return NotFound();
+                return RedirectToAction("Index");
             }
             var level = _unitOfWork.Level.GetT(x => x.Id == id);
             if (level == null)
             {
-                return NotFound();
-            }
-            return Ok(level);
-        }
-        [HttpDelete("{id}")]
-        public IActionResult DeleteLevel(long id = 0)
-        {
-            if (id == 0)
-            {
-                return NotFound();
-            }
-            var level = _unitOfWork.Level.GetT(x => x.Id == id);
-            if (level == null)
-            {
-                return NotFound();
+                return RedirectToAction("Index");
             }
             _unitOfWork.Level.Delete(level);
             _unitOfWork.Save();
-            return Ok(level);
+            return RedirectToAction("Index");
         }
 
     }
